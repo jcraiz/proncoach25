@@ -23,8 +23,8 @@ const App: React.FC = () => {
       setLanguage(newLanguage);
       setWords(generatedWords);
       setAppState(AppState.PRACTICE);
-    } catch (err) {
-      setError('Failed to generate words. Please try again.');
+    } catch (err: any) {
+      setError(err.message || 'Failed to generate words. Please try again.');
       console.error(err);
     } finally {
       setIsLoading(false);
