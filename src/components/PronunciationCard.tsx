@@ -32,9 +32,9 @@ const PronunciationCard: React.FC<PronunciationCardProps> = ({ word, language, n
         const userAudioBase64 = await blobToBase64(audioBlob);
         const result = await assessPronunciation(word, language, userAudioBase64, audioBlob.type);
         onAssessmentChange(result);
-    } catch (err) {
+    } catch (err: any) {
         console.error('Assessment failed:', err);
-        setError('Could not get assessment. Please try again.');
+        setError(err.message || 'Could not get assessment. Please try again.');
     } finally {
         setIsLoading(false);
     }
