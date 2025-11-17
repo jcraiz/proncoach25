@@ -1,0 +1,7 @@
+{
+  "name": "Pronunciation Coach",
+  "description": "An application for ESL learners to improve their pronunciation. Users can enter a topic and target language, receive a list of words, listen to native pronunciation, and get AI-powered feedback on their own pronunciation.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
